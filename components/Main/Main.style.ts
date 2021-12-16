@@ -80,7 +80,6 @@ export const Subtitle = styled(`div`)({
     fontWeight: "300",
     fontSize: "2vw",
     lineHeight: "50px",
-    marginBottom: "50px",
     letterSpacing: "0.03em",
     textTransform: "uppercase",
     zIndex: 10,
