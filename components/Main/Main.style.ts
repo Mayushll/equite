@@ -1,6 +1,8 @@
 import {styled} from "@mui/material";
+import Languages from "../../store/Languages";
+import {observer} from "mobx-react";
 
-export const MainWrapper = styled(`main`)({
+export const MainWrapper = observer(styled(`main`)({
     display: "flex",
     flexDirection: "column",
     position: "relative",
@@ -30,13 +32,20 @@ export const MainWrapper = styled(`main`)({
 
         lineHeight: "30px",
     },
+    ['@media (orientation: landscape)']: {
+        fontSize: "100px",
+    },
+
     ['@media (max-width:700px)']: {
         width: "70vw",
     },
     ['@media (max-width:550px)']: {
         width: "90vw",
-    }
-})
+    },
+    ['@media (max-width:830px) and (max-height: 550px)']: {
+        width: "100vw",
+    },
+}))
 export const Title = styled(`div`)({
     display: "flex",
     fontWeight: "bold",
@@ -60,6 +69,9 @@ export const Title = styled(`div`)({
         fontSize: "3vh",
         textAlign: "center",
         lineHeight: "30px",
+    },
+    ['@media (max-width:830px) and (max-height: 550px)']: {
+        fontSize: "3.5vh",
     },
 })
 
@@ -90,5 +102,8 @@ export const Subtitle = styled(`div`)({
         fontSize: "3vh",
         textAlign: "center",
         lineHeight: "30px",
+    },
+    ['@media (max-width:830px) and (max-height: 550px)']: {
+        fontSize: "3.5vh",
     },
 })

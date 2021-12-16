@@ -1,7 +1,9 @@
 import React from 'react';
 import Button from "@mui/material/Button";
+import Languages from "../../../../store/Languages";
+import {observer} from "mobx-react";
 
-export const LeftButton:React.FC = () => {
+export const LeftButton:React.FC = observer(() => {
     return (
         <div>
             <Button
@@ -20,8 +22,8 @@ export const LeftButton:React.FC = () => {
                 }}
                 variant="contained"
             >
-                Инвестору
+                {Languages.language === "ru" ? Languages.languages.buttons.investor.ru : Languages.languages.buttons.investor.eng}
             </Button>
         </div>
     );
-};
+});

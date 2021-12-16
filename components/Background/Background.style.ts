@@ -1,4 +1,28 @@
-import {styled} from "@mui/material";
+import {keyframes, styled} from "@mui/material";
+
+
+const shadow = keyframes`
+   from {
+        box-shadow: 0 0 55px 10px white;
+    }
+    to {
+        box-shadow: 0 0 200px 80px white;
+    }
+`
+export const Point = styled(`div`)({
+    position: "absolute",
+    left: "52%",
+    top: "17%",
+    width: "0px",
+    height: "0px",
+    backgroundColor: "white",
+    margin: "200px 0 0 200px",
+    borderRadius: "50%",
+    animation: `${shadow} 2s infinite alternate`,
+    ['@media (max-width:1500px)']: {
+        display: "none"
+    },
+})
 
 export const Back = styled(`main`)({
     display: "block",
@@ -27,23 +51,4 @@ export const Back = styled(`main`)({
         height: "400px",
         top: "15vh"
     },
-})
-export const PurpleSquare = styled(`main`)({
-    position: "absolute",
-    left: "50%",
-    zIndex: 10,
-    width: "20vw",
-    height: "20vw",
-})
-export const PinkSquare = styled(`main`)({
-    position: "absolute",
-    width: "20vw",
-    height: "20vw",
-    zIndex: 1,
-    bottom: "36vh",
-    right: 0,
-    ['@media (max-width:1220px)']: {
-        zIndex: 999999,
-    },
-
 })

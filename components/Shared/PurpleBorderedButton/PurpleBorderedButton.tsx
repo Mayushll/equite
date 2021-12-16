@@ -18,6 +18,7 @@ export const PurpleBorderedButton:React.FC<Props> = ({children, sx=[], width}) =
                     height: "40px",
                     marginRight: "20px",
                     color: "#AE8DE5",
+                    lineHeight: "15px"
                 },
                 ...(Array.isArray(sx) ? sx : [sx])
             ]}

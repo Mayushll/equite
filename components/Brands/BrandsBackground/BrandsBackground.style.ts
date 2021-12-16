@@ -1,10 +1,9 @@
 import {styled} from "@mui/material";
-import Languages from "../../../store/Languages";
-import {observer} from "mobx-react";
 
-export const BottomImage = observer(styled(`div`)({
+
+export const BottomImage = styled(`div`)({
     position: "absolute",
-    bottom: Languages.language === "ru" ? "-100vh" : "-10vh",
+    bottom: "-14vh",
     left: "-15vw",
     zIndex: "-1",
     width: "100vw",
@@ -25,4 +24,4 @@ export const BottomImage = observer(styled(`div`)({
         left: "0vw",
         bottom: "-12vh",
     },
-}))
+})

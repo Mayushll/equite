@@ -11,7 +11,7 @@ export const NavItem = styled(`div`)({
 export const BurgerWrapper = styled(`div`)({
     cursor: "pointer",
     display: "none",
-    ['@media (max-width:830px)']: {
+    ['@media (max-width:1130px)']: {
         display: "block",
     },
     [':hover']: {

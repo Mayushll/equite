@@ -16,9 +16,9 @@ export const StyledNav = styled("nav")({
     marginBottom: "83px",
     paddingTop: "10px",
     ['@media (max-width:1400px)']: {
-        paddingLeft: "3vh"
+        paddingLeft: "3vh",
     },
-    ['@media (max-width:830px)']: {
-        marginBottom: "5vh",
+    ['@media (max-width:1130px)']: {
+        marginRight: "4.5vw"
     },
 })

@@ -2,8 +2,10 @@ import {StartButton} from "../../Shared/StartButton/StartButton";
 import {PurpleBorderedButton} from "../../Shared/PurpleBorderedButton/PurpleBorderedButton";
 import React from "react";
 import {ButtonsWrapper} from "./Buttons.style";
+import Languages from "../../../store/Languages";
+import {observer} from "mobx-react";
 
-export const Buttons:React.FC = () => {
+export const Buttons:React.FC = observer(() => {
     return (
         <ButtonsWrapper>
             <StartButton
@@ -22,8 +24,8 @@ export const Buttons:React.FC = () => {
                     },
                 }}
             >
-                Я трейдер
+                {Languages.language === "ru" ? Languages.languages.buttons.trader.ru : Languages.languages.buttons.trader.eng}
             </PurpleBorderedButton>
         </ButtonsWrapper>
     );
-};
+});

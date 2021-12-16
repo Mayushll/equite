@@ -6,6 +6,8 @@ import {Burger} from "./Burger/Burger";
 import {StartButton} from "../../Shared/StartButton/StartButton";
 import {PurpleBorderedButton} from "../../Shared/PurpleBorderedButton/PurpleBorderedButton";
 import { BurgerWrapper, NavItem } from './Menu.style';
+import {MenuFragment} from "./MenuItem/MenuItem";
+import Languages from "../../../store/Languages";
 
 
 export default function BasicMenu() {
@@ -29,18 +31,26 @@ export default function BasicMenu() {
                 onClose={handleClose}
                 MenuListProps={{'aria-labelledby': 'basic-button', disablePadding: true}}
             >
-                <MenuItem style={{color: "#101C2B"}} onClick={handleClose}><Link href="/"><a><NavItem>Главная  </NavItem></a></Link></MenuItem>
-                <MenuItem sx={{color: "#101C2B"}} onClick={handleClose}><Link href="/"><a><NavItem>   Рейтинги  </NavItem></a></Link></MenuItem>
-                <MenuItem sx={{color: "#101C2B"}} onClick={handleClose}><Link href="/"><a><NavItem>   Блог  </NavItem></a></Link></MenuItem>
-                <MenuItem sx={{color: "#101C2B"}} onClick={handleClose}><Link href="/"><a><NavItem>   PRO  </NavItem></a></Link></MenuItem>
-                <MenuItem sx={{color: "#101C2B"}} onClick={handleClose}>
+                <MenuFragment handleClose={handleClose}>
+                    {Languages.language === "ru" ? Languages.languages.nav.homepage.ru : Languages.languages.nav.homepage.eng}
+                </MenuFragment>
+                <MenuFragment handleClose={handleClose}>
+                    {Languages.language === "ru" ? Languages.languages.nav.ratings.ru : Languages.languages.nav.ratings.eng}
+                </MenuFragment>
+                <MenuFragment handleClose={handleClose}>
+                    {Languages.language === "ru" ? Languages.languages.nav.blog.ru : Languages.languages.nav.blog.eng}
+                </MenuFragment>
+                <MenuFragment handleClose={handleClose}>
+                    {Languages.language === "ru" ? Languages.languages.nav.PRO.ru : Languages.languages.nav.PRO.eng}
+                </MenuFragment>
+                <MenuFragment handleClose={handleClose}>
                     <div style={{display: "flex", flexDirection: "row"}}>
                         <StartButton width={108} sx={{}}/>
                         <PurpleBorderedButton width={108} sx={{}}>
                             Войти
                         </PurpleBorderedButton>
                     </div>
-                </MenuItem>
+                </MenuFragment>
             </Menu>
         </div>
     );

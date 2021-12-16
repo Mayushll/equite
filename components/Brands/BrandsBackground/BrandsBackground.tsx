@@ -1,7 +1,7 @@
 import group from "../../../public/Group.png"
 import Image from 'next/image'
 import React from "react";
-import { BottomImage } from "./Brands.style";
+import { BottomImage} from "./BrandsBackground.style";
 
 export const BrandsBackground:React.FC = () => {
     return (

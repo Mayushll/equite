@@ -4,35 +4,25 @@ import {styled} from "@mui/material";
 import {StartButton} from "../../../Shared/StartButton/StartButton";
 import {PurpleBorderedButton} from "../../../Shared/PurpleBorderedButton/PurpleBorderedButton";
 import {ButtonsWrapper} from './RightButtons.style';
+import {LanguageButton} from "../../../Shared/LanguageButton/LanguageButton";
+import Languages from "../../../../store/Languages";
+import {observer} from "mobx-react";
 
 
-export const RightButtons:React.FC = () => {
+export const RightButtons:React.FC = observer(() => {
     return (
         <ButtonsWrapper>
-            <Button
-                variant="contained"
-                sx={{
-                    borderColor: "#EEE4FF",
-                    width: "42px",
-                    height: "40px",
-                    marginRight: "20px",
-                    color: "#AE8DE5",
-                    padding: 0,
-                    lineHeight: 0
-                }}
-            >
-                Ru
-            </Button>
+            <LanguageButton/>
             <PurpleBorderedButton
                 width={108}
-                sx={{['@media (max-width:1350px)']: {display: 'none'},}}
+                sx={{['@media (max-width:1130px)']: {display: 'none'},}}
             >
-                Войти
+                {Languages.language === "ru" ? Languages.languages.buttons.login.ru : Languages.languages.buttons.login.eng}
             </PurpleBorderedButton>
             <StartButton
                 width={108}
-                sx={{['@media (max-width:1350px)']: {display: 'none'},}}
+                sx={{['@media (max-width:1130px)']: {display: 'none'},}}
              />
         </ButtonsWrapper>
     );
-};
+});

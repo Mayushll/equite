@@ -11,7 +11,7 @@ export default function Home() {
   return (
     <div>
       <Head>
-        <title>Create Next App</title>
+        <title>Equite Web</title>
         <meta/>
       </Head>
         <AppWrapper>

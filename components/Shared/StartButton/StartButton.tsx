@@ -1,12 +1,14 @@
 import React from 'react';
 import Button from "@mui/material/Button";
+import Languages from "../../../store/Languages";
+import {observer} from "mobx-react";
 
 interface Props{
     width: number
     sx: object
 }
 
-export const StartButton:React.FC<Props>=({width, sx = []}) => {
+export const StartButton:React.FC<Props>= observer(({width, sx = []}) => {
     return (
         <Button
             sx={[
@@ -33,7 +35,7 @@ export const StartButton:React.FC<Props>=({width, sx = []}) => {
             ]}
             variant="contained"
         >
-            Начать
+            {Languages.language === "ru" ? Languages.languages.buttons.start.ru : Languages.languages.buttons.start.eng}
         </Button>
     );
-};
+});

@@ -5,36 +5,9 @@ import okex from "../../public/okex.png"
 import ftx from "../../public/ftx.png"
 import hitbtc from "../../public/hitbtc.png"
 import Image from 'next/image'
-import {styled} from "@mui/material";
+import React from "react"
+import { Brand, BrandsWrapper } from "./Brans.style"
 import {BrandsBackground} from "./BrandsBackground/BrandsBackground";
-
-const Brand = styled(`div`)({
-    paddingRight: "3vw",
-    ['@media (max-width:830px)']: {
-        [":nth-child(3n)"]: {
-            paddingRight: "0vw",
-        }
-    },
-
-})
-const BrandsWrapper = styled(`div`)({
-    position: "relative",
-    display: "grid",
-    gridTemplateColumns: "repeat(6, 235px);",
-    zIndex: "1",
-    alignItems: "center",
-    ['@media (max-width:1400px)']: {
-        padding: "0 2vw"
-    },
-    ['@media (max-width:1450px)']: {
-        gridTemplateColumns: "repeat(6, 16vw);",
-    },
-    ['@media (max-width:700px)']: {
-        gridTemplateColumns: "32vw 32vw 32vw;",
-    },
-
-
-})
 
 export const Brands:React.FC = () => {
     return (
