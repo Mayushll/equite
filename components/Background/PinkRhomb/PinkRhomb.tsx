@@ -1,6 +1,6 @@
 import React from 'react';
 import Image from "next/image";
-import square2 from "../../../public/square2.png";
+import square2 from "../../../public/PinkRhomb.png";
 import { StyledPinkRhomb } from './PinkRhomb.style';
 
 export const PinkRhomb = () => {

@@ -1,5 +1,5 @@
-import romb from "../../public/rombsvg.svg"
-import colorromb from "../../public/colorromb.svg"
+import romb from "../../public/checkedPoint.svg"
+import colorromb from "../../public/emptyPoint.svg"
 import Image from 'next/image'
 import {useState} from "react";
 import { SelectorWrapper } from "./Selector.style";
